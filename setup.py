@@ -8,7 +8,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="bobtail-jinja2",
-    version="0.0.1",
+    version="0.0.2",
     description="Use Jinja2 templating engine with Bobtail",
     packages=["bobtail_jinja2"],
     py_modules=["bobtail_jinja2"],
