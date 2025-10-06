@@ -4,7 +4,7 @@ Templating
 from typing import Dict
 from bobtail import Request, Response, Tail
 from bobtail.middleware import AbstractMiddleware
-from jinja2 import Environment, FileSystemLoader
+from jinja2 import Environment, PackageLoader
 
 
 class _Template:
@@ -18,7 +18,7 @@ class _Template:
         """
         :param template_dir:
         """
-        file_loader = FileSystemLoader(template_dir)
+        file_loader = PackageLoader(template_dir)
         self.env = Environment(loader=file_loader)
 
     def render(self, res: Response, template: str, *, data: Dict = None):
